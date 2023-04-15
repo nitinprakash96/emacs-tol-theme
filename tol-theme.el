@@ -153,9 +153,6 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(diff-refine-removed ((t (:background "#883333" :foreground ,tol-red))))
    `(diff-header ((,class (:background ,tol-graphite+2))
                   (t (:background ,tol-fg :foreground ,tol-bg))))
-   ;; `(diff-file-header
-   ;;   ((,class (:background ,zenburn-bg+2 :foreground ,zenburn-fg :weight bold))
-   ;;    (t (:background ,zenburn-fg :foreground ,zenburn-bg :weight bold))))
 
    ;; diff-hl
    `(diff-hl-change ((,class (:foreground ,tol-blue :background ,tol-blue-1))))
@@ -167,7 +164,6 @@ Also bind `class' to ((class color) (min-colors 89))."
   (custom-theme-set-variables
    'tol
    '(linum-format " %3i ")))
-
 
 
 ;;;###autoload
