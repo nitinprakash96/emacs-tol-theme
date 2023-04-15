@@ -50,17 +50,18 @@ defining them in this alist."
     ("tol-olive"       . "#bbcc33") ;; Olive green, used for strings.
     ("tol-grey+1"      . "#dddddd") ;; Light grey, used for function calls and enums.
     ("tol-dark-slate"  . "#383c4d")
-    ("tol-red+1"       . "#DCA3A3")
+    ("tol-red+1"       . "#dca3a3")
     ("tol-red"         . "#cc9393")
     ("tol-red-1"       . "#bc8383")
     ("tol-red-2"       . "#ac7373")
     ("tol-green+4"     . "#bfebbf")
+    ("tol-green+2"     . "#9fc59f")
     ("tol-green+1"     . "#8fb28f")
     ("tol-green"       . "#7f9f7f")
     ("tol-green-1"     . "#6f8f6f")
     ("tol-green-2"     . "#5f7f5f")
     ("tol-blue"        . "#8cd0d3")
-    ("tol-blue-1"      . "#6CA0A3")
+    ("tol-blue-1"      . "#6ca0a3")
     ("tol-yellow-1"    . "#e0cf9f")
     ("tol-yellow"      . "#f0dfaf"))
   "List of tol theme colors.
@@ -120,9 +121,6 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(line-number-current-line ((t (:foreground ,tol-bg+3 ))))
 
 
-   ;; THIRD PARTY PACKAGE FACES
-
-
    ;; doom-modeline-mode
    `(doom-modeline-bar ((t (:background ,tol-graphite :foreground ,tol-pale-yellow ))))
    `(doom-modeline-inactive-bar ((t (:background ,tol-charcoal :foreground ,tol-ivory ))))
@@ -137,14 +135,17 @@ Also bind `class' to ((class color) (min-colors 89))."
 
    ;; company-mode
    `(company-tooltip ((t (:background ,tol-dark-slate :foreground ,tol-fg+1 ))))
+   `(company-scrollbar-fg ((t (:background ,tol-bg-1))))
+   `(company-scrollbar-bg ((t (:background ,tol-bg+2))))
+   `(company-preview ((t (:background ,tol-green+2))))
 
 
    ;; org-mode
    `(org-block ((t (:background ,tol-bg-1 :foreground ,tol-fg+2 ))))
    `(org-block-begin-line ((t (:foreground ,tol-grey-1 ))))
 
+
    ;; diff
-   ;; Please read (info "(magit)Theming Faces") before changing this.
    `(diff-added          ((t (:background "#335533" :foreground ,tol-green))))
    `(diff-changed        ((t (:background "#555511" :foreground ,tol-yellow-1))))
    `(diff-removed        ((t (:background "#553333" :foreground ,tol-red-2))))
@@ -154,10 +155,12 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(diff-header ((,class (:background ,tol-graphite+2))
                   (t (:background ,tol-fg :foreground ,tol-bg))))
 
+
    ;; diff-hl
    `(diff-hl-change ((,class (:foreground ,tol-blue :background ,tol-blue-1))))
    `(diff-hl-delete ((,class (:foreground ,tol-red+1 :background ,tol-red-1))))
    `(diff-hl-insert ((,class (:foreground ,tol-green+1 :background ,tol-green-2))))))
+
 
 ;;; Theme variables
 (tol-color-variables
